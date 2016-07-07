@@ -3,7 +3,6 @@ if (empty($_COOKIE['usuario'])){
 echo'<h1 align="center">Erro Usuário não logado</h1>';
 header('location:index.php');}
 
-
 if (isset($_POST['submitted'])) {
   
   require_once('includes/conexao.php');
@@ -17,8 +16,6 @@ if (isset($_POST['submitted'])) {
     else {
       $cpm = mysqli_real_escape_string ($dbc, trim($_POST['cpm']));
     }
-
-   
 
       if (empty($erros)) {
       $q = "INSERT INTO cupom 
